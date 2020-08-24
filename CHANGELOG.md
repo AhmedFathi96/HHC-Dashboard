@@ -11,7 +11,7 @@
   - https://github.com/creativetimofficial/ct-argon-dashboard-pro-react/issues/6
   - https://github.com/creativetimofficial/ct-argon-dashboard-pro-react/issues/2
 ### Major style changes
-- Changed almost all files from the scss folder (`src/assets/scss/*`)
+- Changed almost all files from the scss folder (`src/../assets/scss/*`)
 ### Deleted components
 ### Added components
 - Added page and layout for RTL Support

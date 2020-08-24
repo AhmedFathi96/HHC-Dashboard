@@ -3,11 +3,11 @@ import React from "react";
 // react library for routing
 import { Route, Switch, Redirect } from "react-router-dom";
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import AdminFooter from "components/Footers/AdminFooter.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import AdminNavbar from "../components/Navbars/AdminNavbar.js";
+import AdminFooter from "../components/Footers/AdminFooter.js";
+import Sidebar from "../components/Sidebar/Sidebar.js";
 
-import routes from "routes.js";
+import routes from "../routes";
 
 class Admin extends React.Component {
   state = {
@@ -80,9 +80,9 @@ class Admin extends React.Component {
           sidenavOpen={this.state.sidenavOpen}
           logo={{
             innerLink: "/",
-            imgSrc: require("assets/img/brand/argon-react.png"),
+            imgSrc: require("../assets/img/brand/argon-react.png"),
             imgAlt: "..."
-          }}
+          }}a
         />
         <div
           className="main-content"

@@ -14,7 +14,7 @@ import {
   Col
 } from "reactstrap";
 // core components
-import AuthHeader from "components/Headers/AuthHeader.js";
+import AuthHeader from "../components/Headers/AuthHeader.js";
 
 class Pricing extends React.Component {
   render() {

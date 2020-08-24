@@ -97,11 +97,11 @@
       .list-group-item {
         &:first-child {
           @include border-bottom-left-radius($list-group-border-radius);
-          @include border-top-right-radius(0);
+          @include border-top-left-radius(0);
         }
 
         &:last-child {
-          @include border-top-right-radius($list-group-border-radius);
+          @include border-top-left-radius($list-group-border-radius);
           @include border-bottom-left-radius(0);
         }
 

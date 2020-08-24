@@ -40,11 +40,11 @@
 
 .rounded-top {
   border-top-left-radius: $border-radius !important;
-  border-top-right-radius: $border-radius !important;
+  border-top-left-radius: $border-radius !important;
 }
 
 .rounded-right {
-  border-top-right-radius: $border-radius !important;
+  border-top-left-radius: $border-radius !important;
   border-bottom-right-radius: $border-radius !important;
 }
 

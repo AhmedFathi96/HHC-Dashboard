@@ -19,7 +19,7 @@ import {
   Col
 } from "reactstrap";
 // core components
-import AuthHeader from "components/Headers/AuthHeader.js";
+import AuthHeader from "../../../components/Headers/AuthHeader.js";
 
 class Register extends React.Component {
   state = {};
@@ -48,7 +48,7 @@ class Register extends React.Component {
                       <span className="btn-inner--icon mr-1">
                         <img
                           alt="..."
-                          src={require("assets/img/icons/common/github.svg")}
+                          src={require("../../../assets/img/icons/common/github.svg")}
                         />
                       </span>
                       <span className="btn-inner--text">Github</span>
@@ -62,7 +62,7 @@ class Register extends React.Component {
                       <span className="btn-inner--icon mr-1">
                         <img
                           alt="..."
-                          src={require("assets/img/icons/common/google.svg")}
+                          src={require("../../../assets/img/icons/common/google.svg")}
                         />
                       </span>
                       <span className="btn-inner--text">Google</span>

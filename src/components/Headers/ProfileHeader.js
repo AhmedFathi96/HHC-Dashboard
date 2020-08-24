@@ -13,7 +13,7 @@ class ProfileHeader extends React.Component {
           style={{
             minHeight: "500px",
             backgroundImage:
-              'url("' + require("assets/img/theme/profile-cover.jpg") + '")',
+              'url("' + require("../assets/img/theme/profile-cover.jpg") + '")',
             backgroundSize: "cover",
             backgroundPosition: "center top"
           }}

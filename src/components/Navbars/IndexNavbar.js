@@ -30,7 +30,7 @@ class AdminNavbar extends React.Component {
             <NavbarBrand to="/" tag={Link}>
               <img
                 alt="..."
-                src={require("assets/img/brand/argon-react-white.png")}
+                src={require("../assets/img/brand/argon-react-white.png")}
               />
             </NavbarBrand>
             <button
@@ -56,7 +56,7 @@ class AdminNavbar extends React.Component {
                     <Link to="/dashboard">
                       <img
                         alt="..."
-                        src={require("assets/img/brand/blue.png")}
+                        src={require("../../assets/img/brand/blue.png")}
                       />
                     </Link>
                   </Col>

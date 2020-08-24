@@ -33,7 +33,7 @@ class RTLSupport extends React.Component {
               <Card className="card-profile">
                 <CardImg
                   alt="..."
-                  src={require("assets/img/theme/img-1-1000x600.jpg")}
+                  src={require("../assets/img/theme/img-1-1000x600.jpg")}
                   top
                 />
                 <Row className="justify-content-center">
@@ -43,7 +43,7 @@ class RTLSupport extends React.Component {
                         <img
                           alt="..."
                           className="rounded-circle"
-                          src={require("assets/img/theme/team-4.jpg")}
+                          src={require("../../assets/img/theme/team-4.jpg")}
                         />
                       </a>
                     </div>
@@ -128,7 +128,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("assets/img/theme/bootstrap.jpg")}
+                              src={require("../assets/img/theme/bootstrap.jpg")}
                             />
                           </a>
                         </Col>
@@ -153,7 +153,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("assets/img/theme/angular.jpg")}
+                              src={require("../assets/img/theme/angular.jpg")}
                             />
                           </a>
                         </Col>
@@ -178,7 +178,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("assets/img/theme/sketch.jpg")}
+                              src={require("../assets/img/theme/sketch.jpg")}
                             />
                           </a>
                         </Col>
@@ -203,7 +203,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("assets/img/theme/react.jpg")}
+                              src={require("../assets/img/theme/react.jpg")}
                             />
                           </a>
                         </Col>
@@ -228,7 +228,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("assets/img/theme/vue.jpg")}
+                              src={require("../assets/img/theme/vue.jpg")}
                             />
                           </a>
                         </Col>

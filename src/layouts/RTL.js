@@ -3,11 +3,11 @@ import React from "react";
 // react library for routing
 import { Route, Switch, Redirect } from "react-router-dom";
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import AdminFooter from "components/Footers/AdminFooter.js";
-import Sidebar from "components/Sidebar/Sidebar.js";
+import AdminNavbar from "../components/Navbars/AdminNavbar.js";
+import AdminFooter from "../components/Footers/AdminFooter.js";
+import Sidebar from "../components/Sidebar/Sidebar.js";
 
-import routes from "routes.js";
+import routes from "../routes";
 
 class RTL extends React.Component {
   constructor(props) {
@@ -82,7 +82,7 @@ class RTL extends React.Component {
           sidenavOpen={this.state.sidenavOpen}
           logo={{
             innerLink: "/",
-            imgSrc: require("assets/img/brand/argon-react.png"),
+            imgSrc: require("../assets/img/brand/argon-react.png"),
             imgAlt: "..."
           }}
           rtlActive

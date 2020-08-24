@@ -144,7 +144,7 @@ class AdminNavbar extends React.Component {
                             <img
                               alt="..."
                               className="avatar rounded-circle"
-                              src={require("assets/img/theme/team-1.jpg")}
+                              src={require("../../assets/img/theme/team-1.jpg")}
                             />
                           </Col>
                           <div className="col ml--2">
@@ -173,7 +173,7 @@ class AdminNavbar extends React.Component {
                             <img
                               alt="..."
                               className="avatar rounded-circle"
-                              src={require("assets/img/theme/team-2.jpg")}
+                              src={require("../../assets/img/theme/team-2.jpg")}
                             />
                           </Col>
                           <div className="col ml--2">
@@ -202,7 +202,7 @@ class AdminNavbar extends React.Component {
                             <img
                               alt="..."
                               className="avatar rounded-circle"
-                              src={require("assets/img/theme/team-3.jpg")}
+                              src={require("../../assets/img/theme/team-3.jpg")}
                             />
                           </Col>
                           <div className="col ml--2">
@@ -231,7 +231,7 @@ class AdminNavbar extends React.Component {
                             <img
                               alt="..."
                               className="avatar rounded-circle"
-                              src={require("assets/img/theme/team-4.jpg")}
+                              src={require("../../assets/img/theme/team-4.jpg")}
                             />
                           </Col>
                           <div className="col ml--2">
@@ -260,7 +260,7 @@ class AdminNavbar extends React.Component {
                             <img
                               alt="..."
                               className="avatar rounded-circle"
-                              src={require("assets/img/theme/team-5.jpg")}
+                              src={require("../../assets/img/theme/team-5.jpg")}
                             />
                           </Col>
                           <div className="col ml--2">
@@ -381,7 +381,7 @@ class AdminNavbar extends React.Component {
                       <span className="avatar avatar-sm rounded-circle">
                         <img
                           alt="..."
-                          src={require("assets/img/theme/team-4.jpg")}
+                          src={require("../../assets/img/theme/team-4.jpg")}
                         />
                       </span>
                       <Media className="ml-2 d-none d-lg-block">

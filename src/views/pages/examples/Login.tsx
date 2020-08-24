@@ -6,7 +6,6 @@ import classnames from "classnames";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   FormGroup,
   Form,
@@ -18,12 +17,29 @@ import {
   Row,
   Col
 } from "reactstrap";
-// core components
-import AuthHeader from "components/Headers/AuthHeader.js";
+import { useFormik  } from 'formik';
 
-class Login extends React.Component {
-  state = {};
-  render() {
+// core components
+import AuthHeader from "../../../components/Headers/AuthHeader";
+// import { login } from "../../../React-Redux/Actions/login-action";
+import { useDispatch } from "react-redux";
+import { login } from "../../../React-Redux/Actions/login-action";
+
+const Login:React.FC = (props) => {
+
+    // Pass the useFormik() hook initial form values and a submit function that will
+    // be called when the form is submitted
+    const dispatch = useDispatch();
+    const formik = useFormik({
+      initialValues: {
+        password: '',
+        email: '',
+      },
+      onSubmit: values => {
+        console.log(values);
+        dispatch(login({password:values.password , email:values.email}));
+      },
+    });
     return (
       <>
         <AuthHeader
@@ -34,50 +50,14 @@ class Login extends React.Component {
           <Row className="justify-content-center">
             <Col lg="5" md="7">
               <Card className="bg-secondary border-0 mb-0">
-                <CardHeader className="bg-transparent pb-5">
-                  <div className="text-muted text-center mt-2 mb-3">
-                    <small>Sign in with</small>
-                  </div>
-                  <div className="btn-wrapper text-center">
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <span className="btn-inner--icon mr-1">
-                        <img
-                          alt="..."
-                          src={require("assets/img/icons/common/github.svg")}
-                        />
-                      </span>
-                      <span className="btn-inner--text">Github</span>
-                    </Button>
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      <span className="btn-inner--icon mr-1">
-                        <img
-                          alt="..."
-                          src={require("assets/img/icons/common/google.svg")}
-                        />
-                      </span>
-                      <span className="btn-inner--text">Google</span>
-                    </Button>
-                  </div>
-                </CardHeader>
+              
                 <CardBody className="px-lg-5 py-lg-5">
                   <div className="text-center text-muted mb-4">
-                    <small>Or sign in with credentials</small>
+                    <small>Or sign in with credentials</small> 
                   </div>
-                  <Form role="form">
+                  <Form role="form" onSubmit={formik.handleSubmit}>
                     <FormGroup
-                      className={classnames("mb-3", {
-                        focused: this.state.focusedEmail
-                      })}
+                      className={classnames("mb-3")}
                     >
                       <InputGroup className="input-group-merge input-group-alternative">
                         <InputGroupAddon addonType="prepend">
@@ -86,17 +66,21 @@ class Login extends React.Component {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
+                          id="email"
+                          name="email"
+                          onChange={formik.handleChange}
+                          value={formik.values.email}
                           placeholder="Email"
                           type="email"
-                          onFocus={() => this.setState({ focusedEmail: true })}
-                          onBlur={() => this.setState({ focusedEmail: false })}
+                          // onFocus={() => this.setState({ focusedEmail: true })}
+                          // onBlur={() => this.setState({ focusedEmail: false })}
                         />
                       </InputGroup>
                     </FormGroup>
                     <FormGroup
-                      className={classnames({
-                        focused: this.state.focusedPassword
-                      })}
+                      // className={classnames({
+                      //   focused: this.state.focusedPassword
+                      // })}
                     >
                       <InputGroup className="input-group-merge input-group-alternative">
                         <InputGroupAddon addonType="prepend">
@@ -105,14 +89,18 @@ class Login extends React.Component {
                           </InputGroupText>
                         </InputGroupAddon>
                         <Input
+                          id="password"
+                          name="password"
+                          onChange={formik.handleChange}
+                          value={formik.values.password}
                           placeholder="Password"
                           type="password"
-                          onFocus={() =>
-                            this.setState({ focusedPassword: true })
-                          }
-                          onBlur={() =>
-                            this.setState({ focusedPassword: false })
-                          }
+                          // onFocus={() =>
+                          //   this.setState({ focusedPassword: true })
+                          // }
+                          // onBlur={() =>
+                          //   this.setState({ focusedPassword: false })
+                          // }
                         />
                       </InputGroup>
                     </FormGroup>
@@ -130,11 +118,12 @@ class Login extends React.Component {
                       </label>
                     </div>
                     <div className="text-center">
-                      <Button className="my-4" color="info" type="button">
+                      <Button className="my-4" color="info" type="submit">
                         Sign in
                       </Button>
                     </div>
                   </Form>
+              
                 </CardBody>
               </Card>
               <Row className="mt-3">
@@ -162,7 +151,9 @@ class Login extends React.Component {
         </Container>
       </>
     );
-  }
+  
+
 }
 
 export default Login;
+
