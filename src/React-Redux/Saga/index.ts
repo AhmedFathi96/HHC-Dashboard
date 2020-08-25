@@ -24,10 +24,10 @@ import { watchDeleteGalleryImageSaga } from "./delete-gallery-image-saga";
 import { watchCreateGalleryImageSaga } from "./create-gallery-image-saga";
 import { watchEditGalleryImageSaga } from "./edit-gallery-image-saga";
 import { watchGetGalleryImageSaga } from "./get-gallery-images-saga";
-import { watchCreateBlogPostSaga } from "./create-blog-post-saga";
-import { watchDeleteBlogPostSaga } from "./delete-blog-post-saga";
-import { watchGetBlogPostsSaga } from "./get-blog-posts-saga";
-import { watchEditBlogPostSaga } from "./edit-blog-post-saga";
+import { watchCreateProjectSaga } from "./create-project-saga";
+import { watchDeleteProjectSaga } from "./delete-project-saga";
+import { watchGetProjectsSaga } from "./get-project-saga";
+import { watchEditProjectSaga } from "./edit-project-saga";
 import { watchCreateContactSaga } from "./create-contact-saga";
 import { watchDeleteContactSaga } from "./delete-contact-saga";
 import { watchGetContactsSaga } from "./get-contacts-saga";
@@ -71,10 +71,10 @@ export default function* rootSaga() {
         watchEditGalleryImageSaga(),
         watchDeleteGalleryImageSaga(),
         watchGetGalleryImageSaga(),
-        watchEditBlogPostSaga(),
-        watchDeleteBlogPostSaga(),
-        watchCreateBlogPostSaga(),
-        watchGetBlogPostsSaga(),
+        watchEditProjectSaga(),
+        watchDeleteProjectSaga(),
+        watchCreateProjectSaga(),
+        watchGetProjectsSaga(),
         watchCreateContactSaga(),
         watchDeleteContactSaga(),
         watchGetContactsSaga(),

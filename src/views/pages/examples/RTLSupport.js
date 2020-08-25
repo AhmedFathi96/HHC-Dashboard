@@ -1,4 +1,19 @@
+/*!
 
+=========================================================
+* Argon Dashboard PRO React - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React from "react";
 
 // reactstrap components
@@ -33,7 +48,7 @@ class RTLSupport extends React.Component {
               <Card className="card-profile">
                 <CardImg
                   alt="..."
-                  src={require("../assets/img/theme/img-1-1000x600.jpg")}
+                  src={require("assets/img/theme/img-1-1000x600.jpg")}
                   top
                 />
                 <Row className="justify-content-center">
@@ -43,7 +58,7 @@ class RTLSupport extends React.Component {
                         <img
                           alt="..."
                           className="rounded-circle"
-                          src={require("../../assets/img/theme/team-4.jpg")}
+                          src={require("assets/img/theme/team-4.jpg")}
                         />
                       </a>
                     </div>
@@ -128,7 +143,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../assets/img/theme/bootstrap.jpg")}
+                              src={require("assets/img/theme/bootstrap.jpg")}
                             />
                           </a>
                         </Col>
@@ -153,7 +168,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../assets/img/theme/angular.jpg")}
+                              src={require("assets/img/theme/angular.jpg")}
                             />
                           </a>
                         </Col>
@@ -178,7 +193,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../assets/img/theme/sketch.jpg")}
+                              src={require("assets/img/theme/sketch.jpg")}
                             />
                           </a>
                         </Col>
@@ -203,7 +218,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../assets/img/theme/react.jpg")}
+                              src={require("assets/img/theme/react.jpg")}
                             />
                           </a>
                         </Col>
@@ -228,7 +243,7 @@ class RTLSupport extends React.Component {
                           >
                             <img
                               alt="..."
-                              src={require("../assets/img/theme/vue.jpg")}
+                              src={require("assets/img/theme/vue.jpg")}
                             />
                           </a>
                         </Col>

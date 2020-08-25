@@ -9,7 +9,7 @@ import {sliderItemsReducer} from './slider-reducer';
 import {aboutReducer} from './about-reducer';
 import {statisticReducer} from './statistics-reducer';
 import {galleryImagesReducer} from './gallery-reducer';
-import {blogReducer} from './blog-reducer';
+import {projectsReducer} from './project-reducer';
 import {contactsReducer} from './contacts-reducer';
 import {featuresReducer} from './features-reducer';
 import {infoReducer} from './info-reducer';
@@ -28,7 +28,7 @@ export const rootReducer = combineReducers({
     aboutReducer,
     statisticReducer,
     galleryImagesReducer,
-    blogReducer,
+    projectsReducer,
     contactsReducer,
     featuresReducer,
 

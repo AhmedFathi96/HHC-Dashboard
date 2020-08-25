@@ -1,4 +1,4 @@
-const production = 'https://wessammohamed.com/';
+// const production = 'https://wessammohamed.com/';
 const local = 'http://localhost:6100/';
 
 
@@ -41,10 +41,10 @@ export const editGalleryImageURL = (id:string) => `${server}api/gallery/update-g
 export const deleteGalleryImageURL = (id:string) => `${server}api/gallery/delete-gallery-image/${id}`;
 
 
-export const getBlogPostsURL = `${server}api/blog/get-blog-posts`;
-export const createBlogPostURL = `${server}api/blog/add-blog-post`;
-export const editBlogPostURL = (id:string) => `${server}api/blog/update-blog-post/${id}`;
-export const deleteBlogPostURL = (id:string) => `${server}api/blog/delete-blog-post/${id}`;
+export const getProjectsURL = `${server}api/projects/get-projects`;
+export const createProjectURL = `${server}api/projects/add-project`;
+export const editProjectURL = (id:string) => `${server}api/projects/update-project/${id}`;
+export const deleteProjectURL = (id:string) => `${server}api/projects/delete-project/${id}`;
 
 
 

@@ -11,16 +11,24 @@ interface IState{
 export const infoReducer = reducer<IState>(
     {
         Info: {
-            address:"",
-            email:"",
-            phone:"",
-            _id: "",
-            map_url:"",
-            facebook_url:"",
-            twitter_url:"",
+            _id: '',
+            about_header:'',
+            address:'',
+            footer_copyrights:'',
+            contact_header:'',
+            email:'',
+            facebook_url:'',
+            features_header:'',
+            submitting_message:'',
+            gallery_header:'',
             instagram_url:"",
-            whatsapp_number:"",
-            company_name: "",
+            map_url:'',
+            phone:'',
+            projects_header:"",
+            statistics_header:'',
+            twitter_url:'',
+            whatsapp_number:'',
+            youtube_url:''
         },
         info_is_loading:false
     },

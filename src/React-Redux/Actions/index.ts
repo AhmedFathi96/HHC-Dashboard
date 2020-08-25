@@ -112,17 +112,17 @@ export const deleteGalleryImageAction = genericAction(deleteGalleryImage);
 
 // Blog posts Actions
 
-const getBlogPosts = 'GET-BLOG-POST';
-export const getBlogPostsAction = genericAction(getBlogPosts);
+const getProjects = 'GET-PROJECT';
+export const getProjectsAction = genericAction(getProjects);
 
-const createBlogPost = 'CREATE-BLOG-POST';
-export const createBlogPostAction = genericAction(createBlogPost);
+const createProject = 'CREATE-PROJECT';
+export const createProjectAction = genericAction(createProject);
 
-const editBlogPost = 'EDIT-BLOG-POST';
-export const editBlogPostAction = genericAction(editBlogPost);
+const editProject = 'EDIT-PROJECT';
+export const editProjectAction = genericAction(editProject);
 
-const deleteBlogPost = 'DELETE-BLOG-POST';
-export const deleteBlogPostAction = genericAction(deleteBlogPost);
+const deleteProject = 'DELETE-PROJECT';
+export const deleteProjectAction = genericAction(deleteProject);
 
 
 

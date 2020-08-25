@@ -1,22 +1,22 @@
 import { union } from "ts-action";
 import { call, put, takeLatest, select  } from "redux-saga/effects";
-import { createBlogPostAction } from "../Actions";
-import { createBlogPostAPI } from "../../Axios/create-blog-post";
+import { editProjectAction } from "../Actions";
+import { editProjectAPI } from "../../Axios/edit-project";
 import { selectToken } from "../../helper";
-import { createBlogPostSucceeded , createBlogPostFailed  , createBlogPost} from "../Actions/blog-action";
+import { editProjectSucceeded , editProjectFailed  , editProject} from "../Actions/projects-action";
 import { store } from "react-notifications-component";
 
-const actionType = union(createBlogPost);
+const actionType = union(editProject);
 
-function* createBlogPostSaga(action: typeof actionType.actions) {
+function* editProjectSaga(action: typeof actionType.actions) {
     try {
         const token = yield select(selectToken);
-        const res = yield call(createBlogPostAPI, token , action.payload);
+        const res = yield call(editProjectAPI, token , action.payload.data,action.payload.id);
         console.log('===>' , res.data.data)
-        yield put(createBlogPostSucceeded(res.data.data));
+        yield put(editProjectSucceeded(res.data.data));
         store.addNotification({
             title: "Success Message!",
-            message: "blog section added successfully",
+            message: "project has been edited successfully",
             type: "success",
             insert: "top",
             container: "top-left",
@@ -28,7 +28,7 @@ function* createBlogPostSaga(action: typeof actionType.actions) {
             }
         });
     } catch (e) {
-        yield put(createBlogPostFailed(e));
+        yield put(editProjectFailed(e));
         store.addNotification({
             title: "Error Message!",
             message: "Something went wrong",
@@ -45,6 +45,6 @@ function* createBlogPostSaga(action: typeof actionType.actions) {
     } 
 }
 
-export function* watchCreateBlogPostSaga() {
-    yield takeLatest(createBlogPostAction.requested, createBlogPostSaga);
+export function* watchEditProjectSaga() {
+    yield takeLatest(editProjectAction.requested, editProjectSaga);
 }

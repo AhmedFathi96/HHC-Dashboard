@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as Requests from './urls'
 
-export const getBlogPosts = (token:string) =>{
+export const getProjects = (token:string) =>{
     const headers = { Authorization: `Bearer ${token}` };
-    return axios.get(Requests.getBlogPostsURL , {headers});
+    return axios.get(Requests.getProjectsURL , {headers});
 }

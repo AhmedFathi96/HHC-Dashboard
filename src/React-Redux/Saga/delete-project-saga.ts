@@ -1,22 +1,22 @@
 import { union } from "ts-action";
 import { call, put, takeLatest, select  } from "redux-saga/effects";
-import { deleteBlogPostAction } from "../Actions";
-import { deleteBlogPostAPI } from "../../Axios/delete-blog-post";
+import { deleteProjectAction } from "../Actions";
+import { deleteProjectAPI } from "../../Axios/delete-project";
 import { selectToken } from "../../helper";
-import { deleteBlogPostSucceeded , deleteBlogPostFailed  , deleteBlogPost} from "../Actions/blog-action";
+import { deleteProjectSucceeded , deleteProjectFailed  , deleteProject} from "../Actions/projects-action";
 import { store } from "react-notifications-component";
 
-const actionType = union(deleteBlogPost);
+const actionType = union(deleteProject);
 
-function* deleteBlogPostSaga(action: typeof actionType.actions) {
+function* deleteProjectSaga(action: typeof actionType.actions) {
     try {
         const token = yield select(selectToken);
-        const res = yield call(deleteBlogPostAPI, token , action.payload);
+        const res = yield call(deleteProjectAPI, token , action.payload);
         console.log('===>' , res.data.data)
-        yield put(deleteBlogPostSucceeded(res.data.data));
+        yield put(deleteProjectSucceeded(res.data.data));
         store.addNotification({
             title: "Success Message!",
-            message: "blog post added successfully",
+            message: "project has been deleted successfully",
             type: "success",
             insert: "top",
             container: "top-left",
@@ -28,7 +28,7 @@ function* deleteBlogPostSaga(action: typeof actionType.actions) {
             }
         });
     } catch (e) {
-        yield put(deleteBlogPostFailed(e));
+        yield put(deleteProjectFailed(e));
         store.addNotification({
             title: "Error Message!",
             message: "Something went wrong",
@@ -45,6 +45,6 @@ function* deleteBlogPostSaga(action: typeof actionType.actions) {
     } 
 }
 
-export function* watchDeleteBlogPostSaga() {
-    yield takeLatest(deleteBlogPostAction.requested, deleteBlogPostSaga);
+export function* watchDeleteProjectSaga() {
+    yield takeLatest(deleteProjectAction.requested, deleteProjectSaga);
 }

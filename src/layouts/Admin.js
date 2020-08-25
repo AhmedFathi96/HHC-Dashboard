@@ -89,13 +89,13 @@ class Admin extends React.Component {
           ref="mainContent"
           onClick={this.closeSidenav}
         >
-          <AdminNavbar
+          {/* <AdminNavbar
             {...this.props}
             theme={this.getNavbarTheme()}
             toggleSidenav={this.toggleSidenav}
             sidenavOpen={this.state.sidenavOpen}
             brandText={this.getBrandText(this.props.location.pathname)}
-          />
+          /> */}
           <Switch>
             {this.getRoutes(routes)}
             <Redirect from="*" to="/" />

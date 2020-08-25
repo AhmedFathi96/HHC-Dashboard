@@ -23,9 +23,47 @@ export interface IStudent{
 
 export interface ISliderItem{
     _id:string;
-    slider_img:File;
+    slider_img?:File;
+    english_header: string;
+    arabic_header: string;
+    desktop_header_font_size: string;
+    desktop_header_font_wight: string;
+    desktop_header_font_color: string;
+    mobile_header_font_size: string;
+    mobile_header_font_wight: string;
+    mobile_header_font_color: string;
+    english_sub_header:string;
+    arabic_sub_header: string;
+    desktop_sub_header_font_size: string;
+    desktop_sub_header_font_wight: string;
+    desktop_sub_header_font_color: string;
+    mobile_sub_header_font_size: string;
+    mobile_sub_header_font_wight: string;
+    mobile_sub_header_font_color: string;
     order:string;
-    caption:string;
+}
+
+
+export interface IProject{
+    _id:string;
+    project_image?:File;
+    english_header: string;
+    arabic_header: string;
+    desktop_header_font_size: string;
+    desktop_header_font_wight: string;
+    desktop_header_font_color: string;
+    mobile_header_font_size: string;
+    mobile_header_font_wight: string;
+    mobile_header_font_color: string;
+    english_sub_header:string;
+    arabic_sub_header: string;
+    desktop_sub_header_font_size: string;
+    desktop_sub_header_font_wight: string;
+    desktop_sub_header_font_color: string;
+    mobile_sub_header_font_size: string;
+    mobile_sub_header_font_wight: string;
+    mobile_sub_header_font_color: string;
+    order:string;
 }
 
 export interface IAboutSection{
@@ -43,16 +81,22 @@ export interface ITestimonialSection{
     content:string;
     author:string;
     about_author:string;
-    order:number;
+    order:string;
 }
 
 
 export interface IGalleryImage{
     _id:string;
-    gallery_img:File;
-    height_ration:number;
-    width_ration:number;
-    order:number;
+    gallery_img?:File;
+    english_header: string;
+    arabic_header: string;
+    desktop_header_font_size: string;
+    desktop_header_font_wight: string;
+    desktop_header_font_color: string;
+    mobile_header_font_size: string;
+    mobile_header_font_wight: string;
+    mobile_header_font_color: string;
+    order:string;
 }
 
 export interface IBlogPost{
@@ -118,6 +162,12 @@ export interface IPageHeaders{
 
 export interface IInfo{
     _id:string;
+    about_header:string;
+    gallery_header:string;
+    projects_header:string;
+    features_header:string;
+    statistics_header:string;
+    contact_header:string;
     address:string;
     email:string;
     phone:string;
@@ -126,7 +176,9 @@ export interface IInfo{
     twitter_url:string;
     instagram_url:string;
     whatsapp_number:string;
-    company_name: string;
+    footer_copyrights: string;
+    submitting_message:string;
+    youtube_url:string;
 }
 
 

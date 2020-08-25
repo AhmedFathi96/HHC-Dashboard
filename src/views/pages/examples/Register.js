@@ -1,4 +1,19 @@
+/*!
 
+=========================================================
+* Argon Dashboard PRO React - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
@@ -19,7 +34,7 @@ import {
   Col
 } from "reactstrap";
 // core components
-import AuthHeader from "../../../components/Headers/AuthHeader.js";
+import AuthHeader from "components/Headers/AuthHeader.js";
 
 class Register extends React.Component {
   state = {};
@@ -48,7 +63,7 @@ class Register extends React.Component {
                       <span className="btn-inner--icon mr-1">
                         <img
                           alt="..."
-                          src={require("../../../assets/img/icons/common/github.svg")}
+                          src={require("assets/img/icons/common/github.svg")}
                         />
                       </span>
                       <span className="btn-inner--text">Github</span>
@@ -62,7 +77,7 @@ class Register extends React.Component {
                       <span className="btn-inner--icon mr-1">
                         <img
                           alt="..."
-                          src={require("../../../assets/img/icons/common/google.svg")}
+                          src={require("assets/img/icons/common/google.svg")}
                         />
                       </span>
                       <span className="btn-inner--text">Google</span>
